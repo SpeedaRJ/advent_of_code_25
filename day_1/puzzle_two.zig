@@ -3,7 +3,7 @@ const std = @import("std");
 pub fn main() !void {
     var t = try std.time.Timer.start();
 
-    const file = try std.fs.cwd().openFile("input.txt", .{ .mode = .read_only });
+    const file = try std.fs.cwd().openFile("./day_1/input.txt", .{ .mode = .read_only });
     defer file.close();
 
     var buffer: [65536]u8 = undefined;
